@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>HangMan</title>
+  </head>
+  <body>
+    <h1>HangMan</h1>
+    <p>Find the hidden word - Enter a letter</p>
+
+    <div class="game-container">
+      <svg height="320" width="320" class="figure-container">
+        <!-- The Rod START-->
+        <!-- Horizonal line for hanging stand -->
+        <line x1="10" y1="10" x2="180" y2="10" />
+
+        <!-- Vertical line for hanging stand -->
+        <line x1="40" y1="10" x2="40" y2="300" />
+
+        <!-- Horizonal line for hanging base -->
+        <line x1="10" y1="300" x2="80" y2="300" />
+
+        <!-- The rope -->
+        <line x1="120" y1="10" x2="120" y2="35" />
+
+        <!-- The Rod END-->
+
+        <!-- The Body START -->
+
+        <!-- The Head -->
+        <circle cx="120" cy="60" r="25" class="figure-part" />
+        <!-- The body -->
+        <line x1="120" y1="100" x2="120" y2="180" class="figure-part" />
+        <!-- Right Hand -->
+        <line x1="140" y1="120" x2="180" y2="100" class="figure-part" />
+        <!-- Left Hand -->
+        <line x1="100" y1="120" x2="60" y2="100" class="figure-part" />
+        <!-- Right Leg -->
+        <line x1="100" y1="200" x2="80" y2="260" class="figure-part" />
+        <!-- Left Leg -->
+        <line x1="140" y1="200" x2="160" y2="260" class="figure-part" />
+        <!-- The Body END-->
+      </svg>
+
+      <div class="wrong-letters-container">
+        <div class="wrong-letters">
+          <p>Wrong Letters</p>
+          <span> A, R, X, Z </span>
+        </div>
+      </div>
+
+      <div class="word" id="word">
+        <div class="letter">H</div>
+        <div class="letter">E</div>
+        <div class="letter">L</div>
+        <div class="letter">L</div>
+        <div class="letter">O</div>
+      </div>
+    </div>
+
+    <!-- Container for the finla Message -->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message">🌷 🌷 🌷 Congrats!!! You Have Won.</h2>
+        <button id="play-button">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Notification Toaster -->
+    <div class="notification-container" id="notification-container">
+      <p>You have already enter this letter</p>
+    </div>
+
+    <!-- Begin -popup-container This is only a hack to avoid ts related issues -->
+    <script>
+      var exports = {};
+    </script>
+    <!-- End - This is only a hack to avoid ts related issues -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
