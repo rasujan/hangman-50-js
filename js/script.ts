@@ -29,8 +29,8 @@ let words = [
 ];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
-// let selectedWord = words[11];
-console.log("🚀 ~ file: script.ts ~ line 30 ~ selectedWord", selectedWord);
+// // let selectedWord = words[11];
+// console.log("🚀 ~ file: script.ts ~ line 30 ~ selectedWord", selectedWord);
 
 const correctLetters = [];
 const wrongLetters = [];
